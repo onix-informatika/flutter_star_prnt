@@ -26,7 +26,12 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace "io.eddayy.flutter_star_prnt"
-    
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     compileSdkVersion 28
 
     sourceSets {
@@ -38,6 +43,12 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
