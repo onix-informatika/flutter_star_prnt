@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "io.eddayy.flutter_star_prnt"
+    namespace = "io.eddayy.flutter_star_prnt"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
